@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Ocean Breeze</title>
+
+    <meta name="description" content="Create your Ocean Breeze account using our simple registration form.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🌊</span>
+            Ocean Breeze
+        </a>
+
+        <nav>
+            <a href="index.html">Login</a>
+            <a href="registration.html" class="active">Register</a>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <main class="registration-container">
+
+        <section class="registration-card">
+
+            <div class="registration-heading">
+                <div class="welcome-icon">✦</div>
+
+                <h1>Create Your Account</h1>
+
+                <p class="subtitle">
+                    Join us and enjoy a simple digital experience.
+                </p>
+            </div>
+
+            <form action="#" method="POST">
+
+                <!-- Personal Information -->
+                <div class="section-heading">
+                    <span>01</span>
+                    Personal Information
+                </div>
+
+                <div class="form-grid">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="reg-email">Email Address *</label>
+
+                        <input
+                            type="email"
+                            id="reg-email"
+                            name="email"
+                            placeholder="example@email.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="reg-password">Password *</label>
+
+                        <input
+                            type="password"
+                            id="reg-password"
+                            name="password"
+                            placeholder="Create a password"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+880 1XXXXXXXXX"
+                            autocomplete="tel"
+                            required
+                        >
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            name="date_of_birth"
+                            required
+                        >
+                    </div>
+
+                    <!-- Country Dropdown -->
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>
+                                Select your country
+                            </option>
+
+                            <option value="bangladesh">Bangladesh</option>
+                            <option value="india">India</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="nepal">Nepal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- Gender Radio Buttons -->
+                <div class="form-group full-width">
+                    <label>Gender *</label>
+
+                    <div class="choice-group">
+
+                        <label class="choice-option">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="male"
+                                required
+                            >
+                            Male
+                        </label>
+
+                        <label class="choice-option">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="female"
+                            >
+                            Female
+                        </label>
+
+                        <label class="choice-option">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="other"
+                            >
+                            Other
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Interests Checkboxes -->
+                <div class="section-heading">
+                    <span>02</span>
+                    Your Interests
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Select your interests (You can choose multiple)</label>
+
+                    <div class="choice-group checkbox-group">
+
+                        <label class="choice-option">
+                            <input
+                                type="checkbox"
+                                name="interests[]"
+                                value="technology"
+                            >
+                            Technology
+                        </label>
+
+                        <label class="choice-option">
+                            <input
+                                type="checkbox"
+                                name="interests[]"
+                                value="education"
+                            >
+                            Education
+                        </label>
+
+                        <label class="choice-option">
+                            <input
+                                type="checkbox"
+                                name="interests[]"
+                                value="sports"
+                            >
+                            Sports
+                        </label>
+
+                        <label class="choice-option">
+                            <input
+                                type="checkbox"
+                                name="interests[]"
+                                value="travel"
+                            >
+                            Travel
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="section-heading">
+                    <span>03</span>
+                    Additional Information
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="address">Address</label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="3"
+                        placeholder="Enter your address..."
+                    ></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="about">About Yourself</label>
+
+                    <textarea
+                        id="about"
+                        name="about"
+                        rows="4"
+                        placeholder="Tell us a little about yourself..."
+                    ></textarea>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="terms-group">
+
+                    <label class="terms-option">
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            value="accepted"
+                            required
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#terms">Terms and Conditions</a>
+                            and Privacy Policy.
+                        </span>
+                    </label>
+
+                </div>
+
+                <!-- Form Buttons -->
+                <div class="button-group">
+
+                    <button type="submit" class="primary-btn">
+                        Submit →
+                    </button>
+
+                    <button type="reset" class="reset-btn">
+                        Reset Form
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- Login Link -->
+            <p class="register-link">
+                Already have an account?
+                <a href="index.html">Login Here</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Website Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Ocean Breeze. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

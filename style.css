@@ -1,0 +1,563 @@
+
+/* ========================================
+   OCEAN BREEZE - MAIN STYLESHEET
+   Theme: Minimal & Elegant
+======================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --background: #F0F8FF;
+    --card: #FFFFFF;
+    --primary: #3997D5;
+    --primary-dark: #247BB8;
+    --dark-text: #173B5B;
+    --light-text: #71869A;
+    --accent: #C6E5FA;
+    --border: #DCEAF4;
+    --shadow: 0 12px 35px rgba(39, 105, 150, 0.10);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(circle at 10% 15%, #D9F0FF 0, transparent 28%),
+        radial-gradient(circle at 90% 85%, #D9F0FF 0, transparent 30%),
+        var(--background);
+    color: var(--dark-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.logo-icon {
+    font-size: 25px;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 12px;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 18px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active {
+    background: var(--accent);
+    color: var(--primary-dark);
+}
+
+/* ========================================
+   LOGIN PAGE
+======================================== */
+
+.login-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 55px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    background: var(--card);
+    padding: 45px 40px;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(198, 229, 250, 0.8);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.login-card:hover,
+.registration-card:hover {
+    box-shadow: 0 18px 45px rgba(39, 105, 150, 0.14);
+}
+
+.welcome-icon {
+    width: 65px;
+    height: 65px;
+    background: var(--accent);
+    color: var(--primary-dark);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+}
+
+.login-card h1,
+.registration-card h1 {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+}
+
+.subtitle {
+    color: var(--light-text);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* ========================================
+   FORM ELEMENTS
+======================================== */
+
+.form-group {
+    margin-bottom: 21px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: var(--dark-text);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 9px;
+}
+
+.form-group input:not([type="radio"]):not([type="checkbox"]),
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--dark-text);
+    background: #FBFDFF;
+    transition: 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #A4B4C3;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(57, 151, 213, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.primary-btn {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #3997D5, #5AB4E8);
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(57, 151, 213, 0.20);
+}
+
+.primary-btn:hover {
+    background: linear-gradient(135deg, #247BB8, #3997D5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(57, 151, 213, 0.28);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+.primary-btn span {
+    margin-left: 8px;
+    font-size: 17px;
+}
+
+/* ========================================
+   LOGIN DIVIDER
+======================================== */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: #A4B4C3;
+    font-size: 11px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* ========================================
+   REGISTRATION PAGE
+======================================== */
+
+.registration-container {
+    flex: 1;
+    width: 100%;
+    padding: 45px 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.registration-card {
+    width: 100%;
+    max-width: 850px;
+    padding: 45px 50px;
+    background: var(--card);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(198, 229, 250, 0.8);
+    transition: 0.3s ease;
+}
+
+.registration-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.registration-heading .welcome-icon {
+    margin-bottom: 18px;
+}
+
+.registration-heading .subtitle {
+    margin-bottom: 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-text);
+    padding-bottom: 13px;
+    margin: 30px 0 23px;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-heading span {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: var(--accent);
+    color: var(--primary-dark);
+    font-size: 12px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 22px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* ========================================
+   RADIO BUTTONS & CHECKBOXES
+======================================== */
+
+.choice-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.choice-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: #F7FBFE;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--dark-text);
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.choice-option:hover {
+    border-color: var(--primary);
+    background: #EDF7FD;
+}
+
+.choice-option input {
+    accent-color: var(--primary);
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.checkbox-group {
+    gap: 10px;
+}
+
+/* ========================================
+   TERMS & CONDITIONS
+======================================== */
+
+.terms-group {
+    margin: 28px 0;
+    padding: 16px;
+    background: #F5FAFE;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.terms-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--light-text);
+    cursor: pointer;
+}
+
+.terms-option input {
+    margin-top: 5px;
+    accent-color: var(--primary);
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.terms-option a,
+.register-link a {
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.terms-option a:hover,
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   FORM BUTTON GROUP
+======================================== */
+
+.button-group {
+    display: flex;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.button-group .primary-btn {
+    flex: 2;
+}
+
+.reset-btn {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #F5FAFE;
+    color: var(--dark-text);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.reset-btn:hover {
+    background: var(--accent);
+    border-color: var(--primary);
+}
+
+/* ========================================
+   LINKS & FOOTER
+======================================== */
+
+.register-link {
+    margin-top: 25px;
+    color: var(--light-text);
+    font-size: 12px;
+    text-align: center;
+}
+
+.bottom-message {
+    margin-top: 25px;
+    color: var(--light-text);
+    font-size: 12px;
+    text-align: center;
+}
+
+.site-footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--light-text);
+    font-size: 11px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        padding: 17px 5%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .site-header nav {
+        gap: 3px;
+    }
+
+    .site-header nav a {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .registration-card {
+        padding: 35px 25px;
+    }
+
+    .login-container {
+        padding: 40px 18px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .login-card {
+        padding: 35px 23px;
+    }
+
+    .login-card h1,
+    .registration-card h1 {
+        font-size: 23px;
+    }
+
+    .registration-container {
+        padding: 30px 13px 40px;
+    }
+
+    .registration-card {
+        padding: 30px 18px;
+        border-radius: 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-group {
+        gap: 9px;
+    }
+
+    .choice-option {
+        padding: 9px 11px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .primary-btn,
+    .reset-btn {
+        flex: auto;
+        width: 100%;
+    }
+
+    .section-heading {
+        font-size: 14px;
+    }
+
+}
